@@ -1,0 +1,4 @@
+var y = (cheerfulness + confident + conscientiousness)/3 * 255;
+    var r = Math.max(anger * 255, y);
+    var g = Math.max((openness + agreeableness)/2 * 255, y);
+    var b = (negative + tentative + analytical)/3 * 255;
