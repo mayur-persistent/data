@@ -1,0 +1,23 @@
+1)   To create solr cluster.
+
+curl -X POST -u "77504c60-c403-4794-bc02-869c887eb23b":"iLZP9uTumgfQ" "https://gateway.watsonplatform.net/retrieve-and-rank/api/v1/solr_clusters" -d ""
+
+Response:
+{"solr_cluster_id":"sc684616fd_8d01_4698_bff8_6b262531f4d9","cluster_name":"","cluster_size":"","solr_cluster_status":"NOT_AVAILABLE"}
+
+
+2) Create a collection and add documents
+
+curl -u "77504c60-c403-4794-bc02-869c887eb23b":"iLZP9uTumgfQ" "https://gateway.watsonplatform.net/retrieve-and-rank/api/v1/solr_clusters/sc684616fd_8d01_4698_bff8_6b262531f4d9"
+
+Response:
+
+{"solr_cluster_id":"sc684616fd_8d01_4698_bff8_6b262531f4d9","cluster_name":"","cluster_size":"","solr_cluster_status":"READY"}
+
+
+
+curl -X POST -H "Content-Type: application/json" -u "77504c60-c403-4794-bc02-869c887eb23b":"iLZP9uTumgfQ" "https://gateway.watsonplatform.net/retrieve-and-rank/api/v1/solr_clusters/sc684616fd_8d01_4698_bff8_6b262531f4d9/solr/example-collection/update" --data-binary cranfield_data.json
+
+
+
+curl -X POST -H "Content-Type: application/zip" -u "77504c60-c403-4794-bc02-869c887eb23b":"iLZP9uTumgfQ" "https://gateway.watsonplatform.net/retrieve-and-rank/api/v1/solr_clusters/sc684616fd_8d01_4698_bff8_6b262531f4d9/config/example-config" --data-binary @{/path_to_file}/cranfield_solr_config.zip
