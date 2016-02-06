@@ -1,0 +1,19 @@
+$scope.emails = [];
+   $scope.products = ["Personal Loans", "Home Loans", "Auto Loans"];
+   
+   $scope.emails.push(
+   {
+	'subject':'Re : Delay in payment','text':'Hi Jennifer, Thank you for informing us about the delay in EMI payment however as per our policy you will charged 0.5% extra on your EMI value as late-payment charges. Please feel free to contact us for any queries/issues <br> Thanks & Regards, <br> Dmitry Ivaniuk ', 'additional':true,
+	'product':'Auto Loans'
+   })
+   
+   $scope.emails.push(
+   {
+	'subject':'Re : Personal Loan Enquiry','text':'Hi Sally,</br>We are sorry to inform you that, we couldn't pass your loan applications as your credit score were not good enough and hence it was rejected by the concerned authority. Please feel free to contact us for any queries/issues.<br>Thanking you.<br>Dmitry Ivaniuk',
+	'additional':true,
+	'product':'Personal Loans'
+   })
+   $scope.emails.push(
+   {'subject':'Re : Technical Issues','text':'Hi Martha, Sorry we cannot resolve this problem as the loan provided to you was given based on the details provided by you. You need to pay EMI on time otherwise we will have to take action against you. We cannot help you further on this matter. <br> Thanks & Regards <br> Dmitry Ivaniuk',
+   'additional':true,
+   'product':'Personal Loans'})
